@@ -1,17 +1,13 @@
 <script setup>
 import AdPreview from "./components/AdPrivew.vue";
 
-export default {
-  components: {
-    'adpreview': AdPreview,
-  }
-}
 
 </script>
 
 <template>
   <div>
-    <h1>Google </h1>
+    <!-- <h1>Google Ad Display</h1> -->
+    <AdPreview/>
 
   </div>
 
