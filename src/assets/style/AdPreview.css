@@ -119,3 +119,28 @@
     border-bottom: 1px solid rgba(0,0,0,.04);
 }
 
+.path {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+}
+
+
+
+.queryAd__pathOne {
+    padding: 1.5rem 0;
+    margin-right: 15px;
+}
+
+.queryAd__pathTwo {
+    padding: 1.5rem 0;
+    margin-left: 15px;
+} 
+
+.pathOne__input {
+    width: 80%;
+}
+
+.pathTwo__input {
+    width: 80%;
+}
