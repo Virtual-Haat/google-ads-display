@@ -1,0 +1,121 @@
+/* ---------------- // Global Styles // --------------------- */
+
+.g__headerSection {
+    border-bottom: 1px solid rgba(0,0,0,.04);
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.g__header {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.g__leftSide-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgba(2,2,12,.042), 0 2px 4px -2px rgba(2,2,12,.1);
+}
+
+.g__querySearch-section{
+    padding: 1.5rem 2.5rem;
+}
+
+.g__searchHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #1c1b1bfc;
+    margin-bottom: 10px;
+}
+
+.g__searchQuery__input {
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(2,2,12,.042), 0 2px 4px -2px rgba(2,2,12,.1);
+    transition: box-shadow .25s cubic-bezier(.19,1,.22,1);
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+}
+
+::placeholder {
+    color: rgba(173, 173, 173, 0.623);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+/* ------------------ // Individual Styles // ---------------- */
+
+.content-wrapper {
+    
+    display: flex;
+    flex-direction: row;
+}
+
+
+.left-side {
+    border-right: 1px solid #7c7c7c24;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(2,2,12,.05), 0 2px 4px -2px rgba(2,2,12,.12);
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 22.5rem;
+    z-index: 1;
+    overflow: auto;
+}
+
+
+.left-side::-webkit-scrollbar {
+    width: 10px;
+}
+
+.left-side::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+
+.left-side::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+
+.arrow {
+  border: solid #0C74FF;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.left-side__querysearch {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid rgba(0,0,0,.04);
+}
+
