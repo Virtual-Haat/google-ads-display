@@ -15,8 +15,8 @@
 
                         </div>
 
-                        <input type="text" id="searchQuery" v-model="querysearch" class="g__searchQuery__input" placeholder="Search Query"
-                        name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="searchQuery" v-model="querysearch" class="g__searchQuery__input"
+                            placeholder="Search Query" name="" maxlength="30" cols="30" rows="10">
 
                     </div>
                 </div>
@@ -35,8 +35,9 @@
 
                         </div>
 
-                        <input type="text" id="headlineOne" v-model="headlineOne" class="headlineOne__input g__searchQuery__input"
-                            placeholder="Headline One" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="headlineOne" v-model="headlineOne"
+                            class="headlineOne__input g__searchQuery__input" placeholder="Headline One" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -47,8 +48,9 @@
 
                         </div>
 
-                        <input type="text" id="headlineTwo" v-model="headlineTwo" class="headlineTwo__input g__searchQuery__input"
-                            placeholder="Headline Two" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="headlineTwo" v-model="headlineTwo"
+                            class="headlineTwo__input g__searchQuery__input" placeholder="Headline Two" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -59,8 +61,9 @@
 
                         </div>
 
-                        <input type="text" id="headlineThree" v-model="headlineThree" class="headlineThree__input g__searchQuery__input"
-                            placeholder="Headline Three" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="headlineThree" v-model="headlineThree"
+                            class="headlineThree__input g__searchQuery__input" placeholder="Headline Three" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -71,8 +74,9 @@
 
                         </div>
 
-                        <input type="text" id="Displayurl" v-model="displayUrl" class="Displayurl__input g__searchQuery__input"
-                            placeholder="Display URL" name="" maxlength="60" cols="30" rows="10">
+                        <input type="text" id="Displayurl" v-model="displayUrl"
+                            class="Displayurl__input g__searchQuery__input" placeholder="Display URL" name="" maxlength="60"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -109,9 +113,9 @@
 
                         </div>
 
-                        <textarea id="DescriptionOne" v-model="descriptionOne" class="DescriptionOne__input g__searchQuery__input"
-                            placeholder="Description One" name="" maxlength="90" cols="30"
-                            rows="5"></textarea>
+                        <textarea id="DescriptionOne" v-model="descriptionOne"
+                            class="DescriptionOne__input g__searchQuery__input" placeholder="Description One" name=""
+                            maxlength="90" cols="30" rows="5"></textarea>
 
                     </div>
 
@@ -122,9 +126,9 @@
 
                         </div>
 
-                        <textarea id="DescriptionTwo" v-model="descriptionTwo" class="DescriptionTwo__input g__searchQuery__input"
-                            placeholder="Description Two" name="" maxlength="90" cols="30"
-                            rows="5"></textarea>
+                        <textarea id="DescriptionTwo" v-model="descriptionTwo"
+                            class="DescriptionTwo__input g__searchQuery__input" placeholder="Description Two" name=""
+                            maxlength="90" cols="30" rows="5"></textarea>
 
                     </div>
 
@@ -176,8 +180,9 @@
 
                         </div>
 
-                        <input type="text" id="snippetOne" v-model="snippetOne" class="snippetOne__input g__searchQuery__input"
-                            placeholder="Snippet One" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="snippetOne" v-model="snippetOne"
+                            class="snippetOne__input g__searchQuery__input" placeholder="Snippet One" name="" maxlength="25"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -188,8 +193,9 @@
 
                         </div>
 
-                        <input type="text" id="snippetTwo" v-model="snippetTwo" class="snippetTwo__input g__searchQuery__input"
-                            placeholder="Snippet Two" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="snippetTwo" v-model="snippetTwo"
+                            class="snippetTwo__input g__searchQuery__input" placeholder="Snippet Two" name="" maxlength="25"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -200,8 +206,9 @@
 
                         </div>
 
-                        <input type="text" id="snippetThree" v-model="snippetThree" class="snippetThree__input g__searchQuery__input"
-                            placeholder="Snippet Three" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="snippetThree" v-model="snippetThree"
+                            class="snippetThree__input g__searchQuery__input" placeholder="Snippet Three" name=""
+                            maxlength="25" cols="30" rows="10">
 
                     </div>
 
@@ -212,8 +219,9 @@
 
                         </div>
 
-                        <input type="text" id="snippetFour" v-model="snippetFour" class="snippetFour__input g__searchQuery__input"
-                            placeholder="Snippet Four" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="snippetFour" v-model="snippetFour"
+                            class="snippetFour__input g__searchQuery__input" placeholder="Snippet Four" name=""
+                            maxlength="25" cols="30" rows="10">
 
                     </div>
 
@@ -224,8 +232,9 @@
 
                         </div>
 
-                        <input type="text" id="snippetFive" v-model="snippetFive" class="snippetFive__input g__searchQuery__input"
-                            placeholder="Snippet Five" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="snippetFive" v-model="snippetFive"
+                            class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
+                            maxlength="25" cols="30" rows="10">
 
                     </div>
 
@@ -239,7 +248,7 @@
                         <span class="calloutExtensions__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
                     </div>
 
-                    
+
                     <div class="calloutOne g__querySearch-section">
                         <div class="calloutOne--header g__searchHeader">
                             <label for="calloutOne">Callout One</label>
@@ -247,8 +256,9 @@
 
                         </div>
 
-                        <input type="text" id="calloutOne" v-model="calloutOne" class="calloutOne__input g__searchQuery__input"
-                            placeholder="Callout One" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="calloutOne" v-model="calloutOne"
+                            class="calloutOne__input g__searchQuery__input" placeholder="Callout One" name="" maxlength="25"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -259,8 +269,9 @@
 
                         </div>
 
-                        <input type="text" id="calloutTwo" v-model="calloutTwo" class="calloutTwo__input g__searchQuery__input"
-                            placeholder="Callout Two" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="calloutTwo" v-model="calloutTwo"
+                            class="calloutTwo__input g__searchQuery__input" placeholder="Callout Two" name="" maxlength="25"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -271,8 +282,9 @@
 
                         </div>
 
-                        <input type="text" id="calloutThree" v-model="calloutThree" class="calloutThree__input g__searchQuery__input"
-                            placeholder="Callout Three" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="calloutThree" v-model="calloutThree"
+                            class="calloutThree__input g__searchQuery__input" placeholder="Callout Three" name=""
+                            maxlength="25" cols="30" rows="10">
 
                     </div>
 
@@ -283,8 +295,9 @@
 
                         </div>
 
-                        <input type="text" id="calloutFour" v-model="calloutFour" class="calloutFour__input g__searchQuery__input"
-                            placeholder="Callout Four" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="calloutFour" v-model="calloutFour"
+                            class="calloutFour__input g__searchQuery__input" placeholder="Callout Four" name=""
+                            maxlength="25" cols="30" rows="10">
 
                     </div>
 
@@ -295,8 +308,9 @@
 
                         </div>
 
-                        <input type="text" id="calloutFive" v-model="calloutFive" class="calloutFive__input g__searchQuery__input"
-                            placeholder="Callout Five" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="calloutFive" v-model="calloutFive"
+                            class="calloutFive__input g__searchQuery__input" placeholder="Callout Five" name=""
+                            maxlength="25" cols="30" rows="10">
 
                     </div>
 
@@ -312,7 +326,7 @@
                         <span class="sitelinkExtensions__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
                     </div>
 
-                    
+
                     <div class="sitelinkOne g__querySearch-section">
                         <div class="sitelinkOne--header g__searchHeader">
                             <label for="sitelinkOne">Sitelink One</label>
@@ -320,8 +334,9 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkOne" v-model="sitelinkOne" class="sitelinkOne__input g__searchQuery__input"
-                            placeholder="Sitelink One" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="sitelinkOne" v-model="sitelinkOne"
+                            class="sitelinkOne__input g__searchQuery__input" placeholder="Sitelink One" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -332,8 +347,9 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkOne__firstLine" v-model="sitelinkOne__firstLine"  class="sitelinkOne__firstLine--input g__searchQuery__input"
-                            placeholder="First Line Description" name="" maxlength="35" cols="30" rows="10">
+                        <input type="text" id="sitelinkOne__firstLine" v-model="sitelinkOne__firstLine"
+                            class="sitelinkOne__firstLine--input g__searchQuery__input" placeholder="First Line Description"
+                            name="" maxlength="35" cols="30" rows="10">
 
                     </div>
 
@@ -344,7 +360,8 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkOne__secondLine" v-model="sitelinkOne__secondLine" class="sitelinkOne__secondLine--input g__searchQuery__input"
+                        <input type="text" id="sitelinkOne__secondLine" v-model="sitelinkOne__secondLine"
+                            class="sitelinkOne__secondLine--input g__searchQuery__input"
                             placeholder="Second Line Description" name="" maxlength="35" cols="30" rows="10">
 
                     </div>
@@ -356,8 +373,9 @@
 
                         </div>
 
-                        <input type="text" id="sitelinktwo" v-model="sitelinktwo" class="sitelinktwo__input g__searchQuery__input"
-                            placeholder="Sitelink two" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="sitelinktwo" v-model="sitelinktwo"
+                            class="sitelinktwo__input g__searchQuery__input" placeholder="Sitelink two" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -368,8 +386,9 @@
 
                         </div>
 
-                        <input type="text" id="sitelinktwo__firstLine" v-model="sitelinktwo__firstLine" class="sitelinktwo__firstLine--input g__searchQuery__input"
-                            placeholder="First Line Description" name="" maxlength="35" cols="30" rows="10">
+                        <input type="text" id="sitelinktwo__firstLine" v-model="sitelinktwo__firstLine"
+                            class="sitelinktwo__firstLine--input g__searchQuery__input" placeholder="First Line Description"
+                            name="" maxlength="35" cols="30" rows="10">
 
                     </div>
 
@@ -380,7 +399,8 @@
 
                         </div>
 
-                        <input type="text" id="sitelinktwo__secondLine" v-model="sitelinktwo__secondLine" class="sitelinktwo__secondLine--input g__searchQuery__input"
+                        <input type="text" id="sitelinktwo__secondLine" v-model="sitelinktwo__secondLine"
+                            class="sitelinktwo__secondLine--input g__searchQuery__input"
                             placeholder="Second Line Description" name="" maxlength="35" cols="30" rows="10">
 
                     </div>
@@ -392,8 +412,9 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkthree" v-model="sitelinkthree" class="sitelinkthree__input g__searchQuery__input"
-                            placeholder="Sitelink Three" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="sitelinkthree" v-model="sitelinkthree"
+                            class="sitelinkthree__input g__searchQuery__input" placeholder="Sitelink Three" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -404,7 +425,8 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkthree__firstLine" v-model="sitelinkthree__firstLine" class="sitelinkthree__firstLine--input g__searchQuery__input"
+                        <input type="text" id="sitelinkthree__firstLine" v-model="sitelinkthree__firstLine"
+                            class="sitelinkthree__firstLine--input g__searchQuery__input"
                             placeholder="First Line Description" name="" maxlength="35" cols="30" rows="10">
 
                     </div>
@@ -416,7 +438,8 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkthree__secondLine" v-model="sitelinkthree__secondLine" class="sitelinkthree__secondLine--input g__searchQuery__input"
+                        <input type="text" id="sitelinkthree__secondLine" v-model="sitelinkthree__secondLine"
+                            class="sitelinkthree__secondLine--input g__searchQuery__input"
                             placeholder="Second Line Description" name="" maxlength="35" cols="30" rows="10">
 
                     </div>
@@ -428,8 +451,9 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkfour" v-model="sitelinkfour" class="sitelinkfour__input g__searchQuery__input"
-                            placeholder="Sitelink Four" name="" maxlength="30" cols="30" rows="10">
+                        <input type="text" id="sitelinkfour" v-model="sitelinkfour"
+                            class="sitelinkfour__input g__searchQuery__input" placeholder="Sitelink Four" name=""
+                            maxlength="30" cols="30" rows="10">
 
                     </div>
 
@@ -440,7 +464,8 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkfour__firstLine" v-model="sitelinkfour__firstLine" class="sitelinkfour__firstLine--input g__searchQuery__input"
+                        <input type="text" id="sitelinkfour__firstLine" v-model="sitelinkfour__firstLine"
+                            class="sitelinkfour__firstLine--input g__searchQuery__input"
                             placeholder="First Line Description" name="" maxlength="35" cols="30" rows="10">
 
                     </div>
@@ -452,13 +477,14 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkfour__secondLine" v-model="sitelinkfour__secondLine" class="sitelinkfour__secondLine--input g__searchQuery__input"
+                        <input type="text" id="sitelinkfour__secondLine" v-model="sitelinkfour__secondLine"
+                            class="sitelinkfour__secondLine--input g__searchQuery__input"
                             placeholder="Second Line Description" name="" maxlength="35" cols="30" rows="10">
 
                     </div>
 
 
-                    
+
 
                 </div>
 
@@ -469,7 +495,7 @@
                         <span class="locationExtension__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
                     </div>
 
-                    
+
                     <div class="location g__querySearch-section">
                         <div class="location--header g__searchHeader">
                             <label for="location">Location Extension</label>
@@ -482,7 +508,7 @@
 
                     </div>
 
-                    
+
 
                 </div>
 
@@ -492,7 +518,7 @@
                         <span class="callExtension__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
                     </div>
 
-                    
+
                     <div class="call g__querySearch-section">
                         <div class="call--header g__searchHeader">
                             <label for="call">Call Extension</label>
@@ -505,7 +531,7 @@
 
                     </div>
 
-                    
+
 
                 </div>
 
@@ -515,7 +541,7 @@
                         <span class="messageExtension__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
                     </div>
 
-                    
+
                     <div class="message g__querySearch-section">
                         <div class="message--header g__searchHeader">
                             <label for="message">Message Extension</label>
@@ -528,7 +554,7 @@
 
                     </div>
 
-                    
+
 
                 </div>
 
@@ -540,12 +566,26 @@
             </section>
 
             <section class="right-side">
-                <div class="right-side__header-section">
-                    <h3 class="right-side__header">Google</h3>
-                    <div class="search-bar">
-                        <input type="text">
-                        <span class="">Search Icon</span>
-                        <p>Hello!</p>
+                <div class="right-side__desktopVersion">
+                    <div class="querySearch">
+                        <img class="google_icon" src="../img/google_logo.svg" alt="">
+                        <div class="search-bar">
+                            <div class="searchBarField">
+                                <p class="searchBar__input">{{ querysearch }}</p>
+                            </div>
+                            <img class="searchIcon" src="../img/search_icon.svg" alt="">
+
+                            <!-- <p>Hello!</p> -->
+                        </div>
+                    </div>
+                    <div class="searchTabs">
+                        <div class="allSearch">
+                            <img src="../img/search_icon_1.svg" alt="">
+                            <p>All</p>
+
+                        </div>
+
+
                     </div>
                 </div>
             </section>
