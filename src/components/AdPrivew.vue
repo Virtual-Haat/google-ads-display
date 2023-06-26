@@ -566,28 +566,81 @@
             </section>
 
             <section class="right-side">
-                <div class="right-side__desktopVersion">
-                    <div class="querySearch">
-                        <img class="google_icon" src="../img/google_logo.svg" alt="">
-                        <div class="search-bar">
-                            <div class="searchBarField">
-                                <p class="searchBar__input">{{ querysearch }}</p>
+                <div class="right-side__desktop-version">
+                    <div class="desktop-version__header">
+                        <div class="header__logo">
+                            <img class="header__logo-google" src="../img/google_logo.svg" alt="">
+                        </div>
+                        <div class="header__right-side">
+                            <div class="header__search-box">
+                                <div class="searchBarField">
+                                    <p class="searchBar__input">{{ querysearch }}</p>
+                                </div>
+                                <img class="searchIcon" src="../img/search_icon.svg" alt="">
+
+
                             </div>
-                            <img class="searchIcon" src="../img/search_icon.svg" alt="">
-
-                            <!-- <p>Hello!</p> -->
+                            <div class="header__tabs">
+                                <div class="tabs__item">
+                                    <span class="material-symbols-outlined">search</span>
+                                    <p class="tab__text">All</p>
+                                </div>
+                                <div class="tabs__item">
+                                    <span class="material-symbols-outlined">Image</span>
+                                    <p class="tab__text">Images</p>
+                                </div>
+                                <div class="tabs__item">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                    <p class="tab__text">Maps</p>
+                                </div>
+                                <div class="tabs__item">
+                                    <span class="material-symbols-outlined">newsmode</span>
+                                    <p class="tab__text">News</p>
+                                </div>
+                                <div class="tabs__item">
+                                    <span class="material-symbols-outlined">slideshow</span>
+                                    <p class="tab__text">Videos</p>
+                                </div>
+                                <div class="tabs__item">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                    <p class="tab__text">More</p>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-                    <div class="searchTabs">
-                        <div class="allSearch">
-                            <img src="../img/search_icon_1.svg" alt="">
-                            <p>All</p>
 
+                    <div class="desktop-version__details">
+                        <div class="details__result-count">
+                            <p>About 368,000,000 results (0.46 seconds)</p>
+                        </div>
+                    </div>
+                    <!-- <div class="querySearch">
+                        <img class="google_icon" src="../img/google_logo.svg" alt="">
+                        <div class="googleStructuredSearch">
+                            <div class="search-bar">
+                                <div class="searchBarField">
+                                    <p class="searchBar__input">{{ querysearch }}</p>
+                                </div>
+                                <img class="searchIcon" src="../img/search_icon.svg" alt="">
+
+                            </div>
+                            <div class="searchTabs">
+                                <div class="allSearch">
+                                    <img src="../img/search_icon_1.svg" alt="">
+                                    <p>All</p>
+
+                                </div>
+
+
+                            </div>
                         </div>
 
-
-                    </div>
+                    </div> -->
                 </div>
+                <section class="right-side__mobile-version">
+
+                </section>
             </section>
 
         </div>
