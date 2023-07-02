@@ -614,6 +614,12 @@
                         <div class="details__result-count">
                             <p>About 368,000,000 results (0.46 seconds)</p>
                         </div>
+
+                        <div class="details__ad-header">
+                            <p class="ad-header__heading">Ad. </p>
+                            <p class="ad-header__heading">Ad. </p>
+
+                        </div>
                     </div>
                     <!-- <div class="querySearch">
                         <img class="google_icon" src="../img/google_logo.svg" alt="">
