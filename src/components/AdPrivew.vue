@@ -74,7 +74,7 @@
 
                         </div>
 
-                        <input type="text" id="Displayurl" v-model="displayUrl"
+                        <input type="text" id="Displayurl" v-model="displayUrl" v-on:keypress="advert()"
                             class="Displayurl__input g__searchQuery__input" placeholder="Display URL" name="" maxlength="60"
                             cols="30" rows="10">
 
@@ -616,8 +616,9 @@
                         </div>
 
                         <div class="details__ad-header">
-                            <p class="ad-header__heading">Ad. </p>
-                            <p class="ad-header__heading">Ad. </p>
+                            <p id="ad-header__heading" class="ad-header__heading">Ad . </p>
+                            <p class="displayUrl">{{ displayUrl }}</p>
+                            
 
                         </div>
                     </div>
@@ -696,6 +697,14 @@ export default {
             call: "",
         }
 
+    },
+
+    methods: {
+        advert: function(){
+            document.getElementById("ad-header__heading").style = "display: block";        
+            
+
+        }
     }
 }
 
