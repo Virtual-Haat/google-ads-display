@@ -1,5 +1,9 @@
 /* ---------------- // Global Styles // --------------------- */
 
+img {
+    width: 100%;
+}
+
 .g__headerSection {
     border-bottom: 1px solid rgba(0,0,0,.04);
     padding: 2rem 2.5rem;
@@ -77,18 +81,19 @@
     
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 
 .left-side {
     border-right: 1px solid #7c7c7c24;
-    position: fixed;
+    /* position: fixed; */
     background-color: #fff;
     box-shadow: 0 0 0 1px rgba(2,2,12,.05), 0 2px 4px -2px rgba(2,2,12,.12);
     left: 0;
     top: 0;
     height: 100vh;
-    width: 22.5rem;
+    width: 26%;
     z-index: 1;
     overflow: auto;
 }
@@ -163,3 +168,114 @@ select {
 
 
 }
+
+.right-side {
+    z-index: 1;
+    padding: 30px 60px;
+    width: 74%;
+}
+
+.right-side__desktop-version {
+    /* padding: 50px; */
+    box-shadow: 0 0 0 1px rgba(2,2,12,.042), 0 2px 4px -2px rgba(2,2,12,.1);
+    border-radius: 8px;
+}
+
+.desktop-version__header {
+    display: flex;
+    column-gap: 20px;
+    padding: 40px 40px 0px 40px;
+    border-bottom: 1px solid rgba(2,2,12,.05);
+
+    /* flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start; */
+}
+
+.header__logo-google {
+    width: 100px;
+}
+
+.header__right-side {
+    width: 100%;
+}
+
+
+
+.googleStructuredSearch {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__search-box {
+    /* width: 700px; */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__tabs {
+    display: flex;
+    padding: 30px 0px 0px 10px;
+}
+.tabs__item {
+    display: flex;
+    column-gap: 5px;
+    margin: 0px 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.desktop-version__details {
+    width: 560px;
+    margin: auto;
+    padding: 20px 60px;
+}
+
+.details__result-count {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+
+.searchBarField {
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    border: 1px solid rgba(2,2,12,.07);
+    background: white;
+    display: grid;
+    align-content: center;
+}
+
+.searchIcon {
+    width: 3%;
+    color: blue;
+    margin-left: -45px;
+}
+
+.searchBar__input {
+    display: inherit;
+    padding:0 20px;
+    font-size: 16px;
+}
+
+.searchTabs {
+    padding: 10px 0 0 40px;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.allSearch {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
