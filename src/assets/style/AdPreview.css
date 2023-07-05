@@ -225,7 +225,7 @@ select {
 }
 .tabs__item {
     display: flex;
-    column-gap: 5px;
+    column-gap: 7px;
     margin: 0px 10px;
     padding-bottom: 10px;
     align-items: center;
@@ -240,6 +240,32 @@ select {
 .details__result-count {
     font-size: 13px;
     margin-bottom: 25px;
+}
+
+.tabs__item span {
+    font-size: 16px;
+    color: #848484ed;
+    /* margin-left: 10px; */
+}
+
+.tab__text {
+    font-size: 15px;
+    color: #363636f6;
+}
+
+.ad-header__heading {
+    display: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.details__ad-header {
+    display: flex;
+    gap: 5px;
+}
+
+.displayUrl {
+    font-size: 14px;
 }
 
 

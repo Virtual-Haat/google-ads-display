@@ -74,7 +74,7 @@
 
                         </div>
 
-                        <input type="text" id="Displayurl" v-model="displayUrl"
+                        <input type="text" id="Displayurl" v-model="displayUrl" v-on:keypress="advert()"
                             class="Displayurl__input g__searchQuery__input" placeholder="Display URL" name="" maxlength="60"
                             cols="30" rows="10">
 
@@ -614,6 +614,13 @@
                         <div class="details__result-count">
                             <p>About 368,000,000 results (0.46 seconds)</p>
                         </div>
+
+                        <div class="details__ad-header">
+                            <p id="ad-header__heading" class="ad-header__heading">Ad . </p>
+                            <p class="displayUrl">{{ displayUrl }}</p>
+                            
+
+                        </div>
                     </div>
                     <!-- <div class="querySearch">
                         <img class="google_icon" src="../img/google_logo.svg" alt="">
@@ -690,6 +697,14 @@ export default {
             call: "",
         }
 
+    },
+
+    methods: {
+        advert: function(){
+            document.getElementById("ad-header__heading").style = "display: block";        
+            
+
+        }
     }
 }
 
