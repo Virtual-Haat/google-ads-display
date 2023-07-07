@@ -48,7 +48,7 @@
 
                         </div>
 
-                        <input type="text" id="headlineTwo" v-model="headlineTwo"
+                        <input type="text" id="headlineTwo" v-model="headlineTwo" v-on:keypress="displayHeadlinetwo()"
                             class="headlineTwo__input g__searchQuery__input" placeholder="Headline Two" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -61,7 +61,7 @@
 
                         </div>
 
-                        <input type="text" id="headlineThree" v-model="headlineThree"
+                        <input type="text" id="headlineThree" v-model="headlineThree" v-on:keypress="displayHeadlinethree()"
                             class="headlineThree__input g__searchQuery__input" placeholder="Headline Three" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -88,8 +88,8 @@
 
                             </div>
 
-                            <input type="text" id="pathOne" v-model="pathOne" class="pathOne__input g__searchQuery__input"
-                                placeholder="Path One" name="" maxlength="15">
+                            <input type="text" id="pathOne" v-model="pathOne" v-on:keypress="displayUrlOne()"
+                                class="pathOne__input g__searchQuery__input" placeholder="Path One" name="" maxlength="15">
 
                         </div>
 
@@ -100,8 +100,8 @@
 
                             </div>
 
-                            <input type="text" id="pathTwo" v-model="pathTwo" class="pathTwo__input g__searchQuery__input"
-                                placeholder="Path Two" name="" maxlength="15">
+                            <input type="text" id="pathTwo" v-model="pathTwo" v-on:keypress="displayUrlTwo()"
+                                class="pathTwo__input g__searchQuery__input" placeholder="Path Two" name="" maxlength="15">
 
                         </div>
                     </div>
@@ -148,7 +148,8 @@
                         </div>
 
                         <div class="selectbox">
-                            <select name="snippetHeader__selectbox" id="snippetHeader">
+                            <select v-model="selected" v-on:click="selectColon()" name="snippetHeader__selectbox"
+                                id="snippetHeader">
                                 <option disabled selected value="">Select</option>
                                 <option value="brands">Brands</option>
                                 <option value="amenities">Amenities</option>
@@ -180,7 +181,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetOne" v-model="snippetOne"
+                        <input type="text" id="snippetOne" v-model="snippetOne" v-on:keypress="snippetCommaOne()"
                             class="snippetOne__input g__searchQuery__input" placeholder="Snippet One" name="" maxlength="25"
                             cols="30" rows="10">
 
@@ -193,7 +194,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetTwo" v-model="snippetTwo"
+                        <input type="text" id="snippetTwo" v-model="snippetTwo" v-on:keypress="snippetCommaTwo()"
                             class="snippetTwo__input g__searchQuery__input" placeholder="Snippet Two" name="" maxlength="25"
                             cols="30" rows="10">
 
@@ -206,7 +207,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetThree" v-model="snippetThree"
+                        <input type="text" id="snippetThree" v-model="snippetThree" v-on:keypress="snippetCommaThree()"
                             class="snippetThree__input g__searchQuery__input" placeholder="Snippet Three" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -219,7 +220,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetFour" v-model="snippetFour"
+                        <input type="text" id="snippetFour" v-model="snippetFour" v-on:keypress="snippetCommaFour()"
                             class="snippetFour__input g__searchQuery__input" placeholder="Snippet Four" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -232,8 +233,8 @@
 
                         </div>
 
-                        <input type="text" id="snippetFive" v-model="snippetFive"
-                            class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
+                        <input type="text" id="snippetFive" v-model="snippetFive" v-on:keypress="snippetEnd
+                            ()" class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
                             maxlength="25" cols="30" rows="10">
 
                     </div>
@@ -581,7 +582,7 @@
 
                             </div>
                             <div class="header__tabs">
-                                <div class="tabs__item">
+                                <div class="tabs__item has-bottom-border">
                                     <span class="material-symbols-outlined">search</span>
                                     <p class="tab__text">All</p>
                                 </div>
@@ -605,7 +606,7 @@
                                     <span class="material-symbols-outlined">more_vert</span>
                                     <p class="tab__text">More</p>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -617,10 +618,50 @@
 
                         <div class="details__ad-header">
                             <p id="ad-header__heading" class="ad-header__heading">Ad . </p>
-                            <p class="displayUrl">{{ displayUrl }}</p>
-                            
+                            <p class="displayUrl g__url">{{ displayUrl }}</p>
+                            <span class="url__devider__one" id="url__devider__one">/</span>
+                            <p class="path-one g__url">{{ pathOne }}</p>
+                            <span class="url__devider__two" id="url__devider__two">/</span>
+                            <p class="path-two g__url">{{ pathTwo }}</p>
+
 
                         </div>
+
+                        <div class="display__headline">
+                            <h3 class="display__headline__one g__headline">{{ headlineOne }}</h3>
+                            <span class="divider__One" id="divider__One">|</span>
+                            <h3 class="display__headline__two g__headline">{{ headlineTwo }}</h3>
+                            <span class="divider__Two" id="divider__Two">|</span>
+                            <h3 class="display__headline__three g__headline">{{ headlineThree }}</h3>
+                        </div>
+
+                        <div class="description">
+                            <p class="description__one g__description">{{ descriptionOne }}</p>
+                            <p class="description__two g__description">{{ descriptionTwo }}</p>
+                            <p class="select-option g__description">{{ selected }}</p>
+                            <span class="select-colon" id="selectColon">:</span>
+
+
+                            <div class="snippet">
+                                <p class="snippet__One g__description">{{ snippetOne }}</p>
+                                <span class="snippet__comma__One" id="snippet__comma__One">,</span>
+                                <p class="snippet__Two g__description">{{ snippetTwo }}</p>
+                                <span class="snippet__comma__Two" id="snippet__comma__Two">,</span>
+                                <p class="snippet__Three g__description">{{ snippetThree }}</p>
+                                <span class="snippet__comma__Three" id="snippet__comma__Three">,</span>
+                                <p class="snippet__Four g__description">{{ snippetFour }}</p>
+                                <span class="snippet__comma__Four" id="snippet__comma__Four">,</span>
+                                <p class="snippet__Five">{{ snippetFive }}</p>
+                                <span class="snippet__end" id="snippet__end">.</span>
+                            </div>
+
+                            
+
+
+                        </div>
+
+
+
                     </div>
                     <!-- <div class="querySearch">
                         <img class="google_icon" src="../img/google_logo.svg" alt="">
@@ -671,6 +712,7 @@ export default {
             pathTwo: "",
             descriptionOne: "",
             descriptionTwo: "",
+            selected: "",
             snippetOne: "",
             snippetTwo: "",
             snippetThree: "",
@@ -700,11 +742,55 @@ export default {
     },
 
     methods: {
-        advert: function(){
-            document.getElementById("ad-header__heading").style = "display: block";        
-            
+        advert: function () {
+            if (this.displayUrl !== "") {
+                document.getElementById("ad-header__heading").style = "display: block";
+            }
 
-        }
+
+
+        },
+        displayHeadlinetwo: function () {
+            document.getElementById("divider__One").style = "display: block";
+        },
+
+        displayHeadlinethree: function () {
+            document.getElementById("divider__Two").style = "display: block";
+        },
+
+        displayUrlOne: function () {
+            document.getElementById("url__devider__one").style = "display: block";
+        },
+
+        displayUrlTwo: function () {
+            document.getElementById("url__devider__two").style = "display: block";
+        },
+
+        selectColon: function () {
+            document.getElementById("selectColon").style = "display: inline";
+        },
+
+        snippetCommaOne: function () {
+            document.getElementById("snippet__comma__One").style = "display: inline";
+        },
+
+        snippetCommaTwo: function () {
+            document.getElementById("snippet__comma__Two").style = "display: inline";
+        },
+
+        snippetCommaThree: function () {
+            document.getElementById("snippet__comma__Three").style = "display: inline";
+        },
+
+        snippetCommaFour: function () {
+            document.getElementById("snippet__comma__Four").style = "display: inline";
+        },
+
+        snippetEnd: function () {
+            document.getElementById("snippet__end").style = "display: inline";
+        },
+
+
     }
 }
 
