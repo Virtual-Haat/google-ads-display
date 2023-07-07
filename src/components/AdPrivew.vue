@@ -167,11 +167,6 @@
                             </select>
                         </div>
 
-
-
-                        <!-- <input type="text" id="snippetHeader" class="snippetHeader__input g__searchQuery__input"
-                            placeholder="snippetHeader" name="" maxlength="30" cols="30" rows="10"> -->
-
                     </div>
 
                     <div class="snippetOne g__querySearch-section">
@@ -181,7 +176,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetOne" v-model="snippetOne" v-on:keypress="snippetCommaOne()"
+                        <input type="text" id="snippetOne" v-model="snippetOne"
                             class="snippetOne__input g__searchQuery__input" placeholder="Snippet One" name="" maxlength="25"
                             cols="30" rows="10">
 
@@ -194,7 +189,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetTwo" v-model="snippetTwo" v-on:keypress="snippetCommaTwo()"
+                        <input type="text" id="snippetTwo" v-model="snippetTwo" v-on:keypress="snippetCommaOne()"
                             class="snippetTwo__input g__searchQuery__input" placeholder="Snippet Two" name="" maxlength="25"
                             cols="30" rows="10">
 
@@ -207,7 +202,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetThree" v-model="snippetThree" v-on:keypress="snippetCommaThree()"
+                        <input type="text" id="snippetThree" v-model="snippetThree" v-on:keypress="snippetCommaTwo()"
                             class="snippetThree__input g__searchQuery__input" placeholder="Snippet Three" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -220,7 +215,7 @@
 
                         </div>
 
-                        <input type="text" id="snippetFour" v-model="snippetFour" v-on:keypress="snippetCommaFour()"
+                        <input type="text" id="snippetFour" v-model="snippetFour" v-on:keypress="snippetCommaThree()"
                             class="snippetFour__input g__searchQuery__input" placeholder="Snippet Four" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -233,8 +228,8 @@
 
                         </div>
 
-                        <input type="text" id="snippetFive" v-model="snippetFive" v-on:keypress="snippetEnd
-                            ()" class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
+                        <input type="text" id="snippetFive" v-model="snippetFive" v-on:keypress="snippetCommaFour()"
+                            class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
                             maxlength="25" cols="30" rows="10">
 
                     </div>
@@ -257,7 +252,7 @@
 
                         </div>
 
-                        <input type="text" id="calloutOne" v-model="calloutOne"
+                        <input type="text" id="calloutOne" v-model="calloutOne" v-on:keypress="snippetEnd()"
                             class="calloutOne__input g__searchQuery__input" placeholder="Callout One" name="" maxlength="25"
                             cols="30" rows="10">
 
@@ -270,7 +265,7 @@
 
                         </div>
 
-                        <input type="text" id="calloutTwo" v-model="calloutTwo"
+                        <input type="text" id="calloutTwo" v-model="calloutTwo" v-on:keypress="calloutSeperatorOne()"
                             class="calloutTwo__input g__searchQuery__input" placeholder="Callout Two" name="" maxlength="25"
                             cols="30" rows="10">
 
@@ -283,7 +278,7 @@
 
                         </div>
 
-                        <input type="text" id="calloutThree" v-model="calloutThree"
+                        <input type="text" id="calloutThree" v-model="calloutThree" v-on:keypress="calloutSeperatorTwo()"
                             class="calloutThree__input g__searchQuery__input" placeholder="Callout Three" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -296,7 +291,7 @@
 
                         </div>
 
-                        <input type="text" id="calloutFour" v-model="calloutFour"
+                        <input type="text" id="calloutFour" v-model="calloutFour" v-on:keypress="calloutSeperatorThree()"
                             class="calloutFour__input g__searchQuery__input" placeholder="Callout Four" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -309,7 +304,7 @@
 
                         </div>
 
-                        <input type="text" id="calloutFive" v-model="calloutFive"
+                        <input type="text" id="calloutFive" v-model="calloutFive" v-on:keypress="calloutSeperatorFour()"
                             class="calloutFive__input g__searchQuery__input" placeholder="Callout Five" name=""
                             maxlength="25" cols="30" rows="10">
 
@@ -335,7 +330,7 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkOne" v-model="sitelinkOne"
+                        <input type="text" id="sitelinkOne" v-model="sitelinkOne" v-on:keypress="calloutEnd()"
                             class="sitelinkOne__input g__searchQuery__input" placeholder="Sitelink One" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -570,7 +565,7 @@
                 <div class="right-side__desktop-version">
                     <div class="desktop-version__header">
                         <div class="header__logo">
-                            <img class="header__logo-google" src="../img/google_logo.svg" alt="">
+                            <img class="header__logo-google" src="../assets/img/google_logo.svg" alt="">
                         </div>
                         <div class="header__right-side">
                             <div class="header__search-box">
@@ -655,7 +650,20 @@
                                 <span class="snippet__end" id="snippet__end">.</span>
                             </div>
 
-                            
+                            <div class="callout">
+                                <p class="callout__one g__description">{{ calloutOne }}</p>
+                                <span class="callout__separator--one" id="callout__separator--one">.</span>
+                                <p class="callout__two g__description">{{ calloutTwo }}</p>
+                                <span class="callout__separator--two" id="callout__separator--two">.</span>
+                                <p class="callout__three g__description">{{ calloutThree }}</p>
+                                <span class="callout__separator--three" id="callout__separator--three">.</span>
+                                <p class="callout__four g__description">{{ calloutFour }}</p>
+                                <span class="callout__separator--four" id="callout__separator--four">.</span>
+                                <p class="callout__five g__description">{{ calloutFive }}</p>
+                                <span class="callout__separator--five" id="callout__separator--five">.</span>
+                            </div>
+
+
 
 
                         </div>
@@ -663,28 +671,6 @@
 
 
                     </div>
-                    <!-- <div class="querySearch">
-                        <img class="google_icon" src="../img/google_logo.svg" alt="">
-                        <div class="googleStructuredSearch">
-                            <div class="search-bar">
-                                <div class="searchBarField">
-                                    <p class="searchBar__input">{{ querysearch }}</p>
-                                </div>
-                                <img class="searchIcon" src="../img/search_icon.svg" alt="">
-
-                            </div>
-                            <div class="searchTabs">
-                                <div class="allSearch">
-                                    <img src="../img/search_icon_1.svg" alt="">
-                                    <p>All</p>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div> -->
                 </div>
                 <section class="right-side__mobile-version">
 
@@ -789,6 +775,30 @@ export default {
         snippetEnd: function () {
             document.getElementById("snippet__end").style = "display: inline";
         },
+
+        calloutSeperatorOne: function() {
+            document.getElementById("callout__separator--one").style = "display: inline";
+        },
+
+        calloutSeperatorTwo: function() {
+            document.getElementById("callout__separator--two").style = "display: inline";
+        },
+
+        calloutSeperatorThree: function() {
+            document.getElementById("callout__separator--three").style = "display: inline";
+        },
+
+        calloutSeperatorFour: function() {
+            document.getElementById("callout__separator--four").style = "display: inline";
+        },
+
+        calloutEnd: function() {
+            document.getElementById("callout__separator--five").style = "display: inline";
+        },
+
+
+
+
 
 
     }
