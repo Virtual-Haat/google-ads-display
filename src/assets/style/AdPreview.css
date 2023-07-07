@@ -334,7 +334,16 @@ select {
 
 .display__headline {
     display: flex;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.description {
+    display: inline;
+}
+
+.snippet {
+    display: inline;
 }
 
 .divider__One {
@@ -395,6 +404,27 @@ select {
 }
 
 .snippet__end {
+    display: none;
+}
+
+
+.callout__separator--one {
+    display: none;
+}
+
+.callout__separator--two {
+    display: none;
+}
+
+.callout__separator--three {
+    display: none;
+}
+
+.callout__separator--four {
+    display: none;
+}
+
+.callout__separator--five {
     display: none;
 }
 
