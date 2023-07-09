@@ -447,6 +447,42 @@ select {
     display: none;
 }
 
+.location-call {
+    display: flex;
+    font-size: 14px;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.location-text {
+    color: #1A0DAB;
+}
+
+.location-display {
+    display: flex;
+}
+
+.location-icon {
+    display: none;
+    font-size: 16px;
+    color: rgb(36, 36, 36);
+    margin-right: 10px;
+}
+
+.call-display {
+    display: flex;
+}
+
+.call-divider {
+    display: none;
+    margin-right: 6px;
+}
+
+.call-text {
+    color: #5c5c5c;
+}
+
+
 .sitelink {
     margin-top: 20px;
 }
@@ -457,7 +493,8 @@ select {
 }
 
 .right-side__mobile-version {
-    width: 400px;
+    width: 450px;
+    margin: auto;
     /* padding: 50px; */
     box-shadow: 0 0 0 1px rgba(2,2,12,.042), 0 2px 4px -2px rgba(2,2,12,.1);
     border-radius: 8px;
@@ -468,6 +505,18 @@ select {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
+}
+
+.search-outline {
+    display: inline;
+    align-items: center;
+    width: 400px;
+    margin: auto;
+    height: 45px;
+    border-radius: 30px;
+    border: 1px solid rgba(2,2,12,.07);
+    background: white;
+    align-content: center;
 }
 
 

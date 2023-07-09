@@ -499,7 +499,7 @@
 
                         </div>
 
-                        <input type="text" id="location" v-model="location" class="location__input g__searchQuery__input"
+                        <input type="text" id="location" v-model="location" v-on:keypress="displayLocation" class="location__input g__searchQuery__input"
                             placeholder="London, UK" name="" maxlength="60" cols="30" rows="10">
 
                     </div>
@@ -522,7 +522,7 @@
 
                         </div>
 
-                        <input type="text" id="call" v-model="call" class="call__input g__searchQuery__input"
+                        <input type="text" id="call" v-model="call" v-on:keypress="displayNumber" class="call__input g__searchQuery__input"
                             placeholder="020 3950 6249" name="" maxlength="25" cols="30" rows="10">
 
                     </div>
@@ -572,7 +572,7 @@
                                 <div class="searchBarField">
                                     <p class="searchBar__input">{{ querysearch }}</p>
                                 </div>
-                                <img class="searchIcon" src="../img/search_icon.svg" alt="">
+                                <img class="searchIcon" src="../assets/img/search_icon.svg" alt="">
 
 
                             </div>
@@ -663,6 +663,18 @@
 
                             </div>
 
+                            <div class="location-call">
+                                <div class="location-display">
+                                    <span class="material-symbols-outlined location-icon" id="location-icon">location_on</span>
+                                    <p class="location-text">{{ location }}</p>
+                                </div>
+
+                                <div class="call-display">
+                                    <span class="call-divider" id="call-divider">-</span>
+                                    <p class="call-text">{{ call }}</p>
+                                </div>
+                            </div>
+
                             <div class="sitelink">
                                 <div class="sitelink__row g__sitelink-container">
                                     <div class="sitelink__one g__sitelink-column">
@@ -694,10 +706,6 @@
 
 
                             </div>
-
-
-
-
                         </div>
 
 
@@ -709,6 +717,14 @@
                         <span class="material-symbols-outlined">menu</span>
                         <img class="header__logo-google" src="../assets/img/google_logo.svg" alt="">
                         <span class="material-symbols-outlined">apps</span>
+                    </div>
+
+                    <div class="searchbar-mobile">
+                        <div class="search-outline">
+                            <span class="material-symbols-outlined">search</span>
+                            <div class="search-text">{{ querysearch }}</div>
+                            <span class="material-symbols-outlined">close</span>
+                        </div>
                     </div>
 
 
@@ -832,6 +848,14 @@ export default {
 
         calloutEnd: function() {
             document.getElementById("callout__separator--five").style = "display: inline";
+        },
+
+        displayLocation: function() {
+            document.getElementById("location-icon").style = "display: block";
+        },
+
+        displayNumber: function() {
+            document.getElementById("call-divider").style = "display: block";
         },
 
 
