@@ -573,6 +573,7 @@ select {
 .mobile-headline {
     display: grid;
     margin-bottom: 10px;
+    padding: 0 30px;
 }
 
 .headline-first-row {
@@ -596,13 +597,13 @@ select {
 
 .mobile-description {
     padding: 0 30px;
-    display: grid;
+    /* display: flex; */
 }
 
 .mobile-description__two {
-    text-overflow: ellipsis;
-    max-width: 80px;
-    overflow: hidden;
-    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+    /* max-width: 20ch; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
 
 }

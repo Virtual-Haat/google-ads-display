@@ -765,8 +765,8 @@
                     </div>
 
                     <div class="mobile-description">
-                        <p class="mobile-description__one g__description">{{ descriptionOne }}</p>
-                        <p class="mobile-description__two g__description">{{ descriptionTwo }}</p>
+                        <p  class="mobile-description__one g__description">{{ this.getMobileDescription(descriptionOne+ ' ' +descriptionTwo,  105) }}</p>
+                        <!-- <p class="mobile-description__two g__description">{{ descriptionTwo }}</p> -->
 
                     </div>
 
@@ -825,6 +825,21 @@ export default {
     },
 
     methods: {
+
+        getMobileDescription(total_description, char_limit) {
+            // to display the description within a specified character limit
+
+            let mobile_des = total_description
+            if (mobile_des.length > char_limit) {
+                mobile_des = mobile_des.slice(0,char_limit) + '...';
+            }
+
+            return(mobile_des);
+        },
+
+
+
+
         advert: function () {
             if (this.displayUrl !== "") {
                 document.getElementById("ad-header__heading").style = "display: block";
