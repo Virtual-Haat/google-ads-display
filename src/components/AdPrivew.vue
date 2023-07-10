@@ -499,8 +499,9 @@
 
                         </div>
 
-                        <input type="text" id="location" v-model="location" v-on:keypress="displayLocation" class="location__input g__searchQuery__input"
-                            placeholder="London, UK" name="" maxlength="60" cols="30" rows="10">
+                        <input type="text" id="location" v-model="location" v-on:keypress="displayLocation"
+                            class="location__input g__searchQuery__input" placeholder="London, UK" name="" maxlength="60"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -522,8 +523,9 @@
 
                         </div>
 
-                        <input type="text" id="call" v-model="call" v-on:keypress="displayNumber" class="call__input g__searchQuery__input"
-                            placeholder="020 3950 6249" name="" maxlength="25" cols="30" rows="10">
+                        <input type="text" id="call" v-model="call" v-on:keypress="displayNumber"
+                            class="call__input g__searchQuery__input" placeholder="020 3950 6249" name="" maxlength="25"
+                            cols="30" rows="10">
 
                     </div>
 
@@ -665,7 +667,8 @@
 
                             <div class="location-call">
                                 <div class="location-display">
-                                    <span class="material-symbols-outlined location-icon" id="location-icon">location_on</span>
+                                    <span class="material-symbols-outlined location-icon"
+                                        id="location-icon">location_on</span>
                                     <p class="location-text">{{ location }}</p>
                                 </div>
 
@@ -722,9 +725,49 @@
                     <div class="searchbar-mobile">
                         <div class="search-outline">
                             <span class="material-symbols-outlined">search</span>
-                            <div class="search-text">{{ querysearch }}</div>
+                            <div class="search-text">
+                                <p>{{ querysearch }}</p>
+                            </div>
                             <span class="material-symbols-outlined">close</span>
                         </div>
+                    </div>
+
+                    <div class="mobile-tab">
+                        <p class="tab-text tab-design"><b>All</b></p>
+                        <p class="tab-text">Shopping</p>
+                        <p class="tab-text">Images</p>
+                        <p class="tab-text">Maps</p>
+                        <p class="tab-text">News</p>
+                    </div>
+
+                    <div class="mobile-url-display">
+                        <p id="mobile-url-header" class="mobile-ad-header__heading">Ad . </p>
+                        <p class="displayUrl g__mobile-url">{{ displayUrl }}</p>
+                        <span class="url__devider__one" id="mobile-url-divider__one">/</span>
+                        <p class="path-one g__mobile-url">{{ pathOne }}</p>
+                        <span class="url__devider__two" id="mobile-url-divider__two">/</span>
+                        <p class="path-two g__mobile-url">{{ pathTwo }}</p>
+
+                    </div>
+
+                    <div class="mobile-headline">
+                        <div class="headline-first-row">
+                            <h3 class="mobile-display__headline__one g__headline">{{ headlineOne }}</h3>
+                            <span class="divider__One" id="mobile-divider__One">|</span>
+                        </div>
+
+                        <div class="headline-second-row">
+                            <h3 class="display__headline__two g__headline">{{ headlineTwo }}</h3>
+                            <span class="divider__Two" id="mobile-divider__two">|</span>
+                            <h3 class="display__headline__three g__headline">{{ headlineThree }}</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="mobile-description">
+                        <p class="mobile-description__one g__description">{{ descriptionOne }}</p>
+                        <p class="mobile-description__two g__description">{{ descriptionTwo }}</p>
+
                     </div>
 
 
@@ -785,6 +828,7 @@ export default {
         advert: function () {
             if (this.displayUrl !== "") {
                 document.getElementById("ad-header__heading").style = "display: block";
+                document.getElementById("mobile-url-header").style = "display: block";
             }
 
 
@@ -792,18 +836,22 @@ export default {
         },
         displayHeadlinetwo: function () {
             document.getElementById("divider__One").style = "display: block";
+            document.getElementById("mobile-divider__One").style = "display: block";
         },
 
         displayHeadlinethree: function () {
             document.getElementById("divider__Two").style = "display: block";
+            document.getElementById("mobile-divider__two").style = "display: block";
         },
 
         displayUrlOne: function () {
             document.getElementById("url__devider__one").style = "display: block";
+            document.getElementById("mobile-url-divider__one").style = "display: block";
         },
 
         displayUrlTwo: function () {
             document.getElementById("url__devider__two").style = "display: block";
+            document.getElementById("mobile-url-divider__two").style = "display: block";
         },
 
         selectColon: function () {
@@ -830,31 +878,31 @@ export default {
             document.getElementById("snippet__end").style = "display: inline";
         },
 
-        calloutSeperatorOne: function() {
+        calloutSeperatorOne: function () {
             document.getElementById("callout__separator--one").style = "display: inline";
         },
 
-        calloutSeperatorTwo: function() {
+        calloutSeperatorTwo: function () {
             document.getElementById("callout__separator--two").style = "display: inline";
         },
 
-        calloutSeperatorThree: function() {
+        calloutSeperatorThree: function () {
             document.getElementById("callout__separator--three").style = "display: inline";
         },
 
-        calloutSeperatorFour: function() {
+        calloutSeperatorFour: function () {
             document.getElementById("callout__separator--four").style = "display: inline";
         },
 
-        calloutEnd: function() {
+        calloutEnd: function () {
             document.getElementById("callout__separator--five").style = "display: inline";
         },
 
-        displayLocation: function() {
+        displayLocation: function () {
             document.getElementById("location-icon").style = "display: block";
         },
 
-        displayNumber: function() {
+        displayNumber: function () {
             document.getElementById("call-divider").style = "display: block";
         },
 
