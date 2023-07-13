@@ -369,7 +369,7 @@
 
                         </div>
 
-                        <input type="text" id="sitelinktwo" v-model="sitelinktwo"
+                        <input type="text" id="sitelinktwo" v-model="sitelinktwo" v-on:keypress="displayBorder()"
                             class="sitelinktwo__input g__searchQuery__input" placeholder="Sitelink two" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -547,7 +547,7 @@
 
                         </div>
 
-                        <input type="text" id="message" v-model="message" class="message__input g__searchQuery__input"
+                        <input type="text" id="message" v-model="message" v-on:keypress="displaymessage" class="message__input g__searchQuery__input"
                             placeholder="Message Extension" name="" maxlength="60" cols="30" rows="10">
 
                     </div>
@@ -765,9 +765,47 @@
                     </div>
 
                     <div class="mobile-description">
-                        <p  class="mobile-description__one g__description">{{ this.getMobileDescription(descriptionOne+ ' ' +descriptionTwo,  105) }}</p>
+                        <p class="mobile-description__one g__description">{{ this.getMobileDescription(descriptionOne + ' '
+                            + descriptionTwo, 115) }}</p>
+
                         <!-- <p class="mobile-description__two g__description">{{ descriptionTwo }}</p> -->
 
+                    </div>
+
+                    <div class="mobile-callout" id="mobile-callout">
+                        <p class="mobile-callout-text g__description">{{ this.getMobileCallout(50) }}</p>
+                    </div>
+
+                    <div class="mobile-sitelink">
+                        <!-- <div class="mobile-sitelink__one g__mobile-sitelink" id="mb-sl__one"> -->
+                        <p class="mobile-sl__headline" id="mobile-sl__headline">{{ sitelinkOne }}</p>
+                        <!-- </div> -->
+                        <!-- 
+                        <div class="mobile-sitelink__two g__mobile-sitelink" id="mb-sl__two">
+                            <p class="mobile-sl__headline">{{ sitelinktwo }}</p>
+                        </div> -->
+                        <!-- 
+                        <div class="mobile-sitelink__three g__mobile-sitelink">
+                            <p class="mobile-sl__headline">{{ sitelinkthree }}</p>
+                        </div> -->
+                    </div>
+
+                    <div class="mobile-location-call">
+                        <div class="mobile-location" id="mobile-location">
+                            <span class="material-symbols-outlined mobile-location-icon"
+                                id="mobile-location-icon">location_on</span>
+                            <p class="mobile-location-text">{{ location }}</p>
+                        </div>
+
+                        <div class="mobile-call" id="mobile-call">
+                            <span class="material-symbols-outlined mobile-call-icon" id="mobile-call-icon">call</span>
+                            <p class="mobile-call-text">{{ call }}</p>
+                        </div>
+                    </div>
+
+                    <div class="mobile-message">
+                        <span class="material-symbols-outlined mobile-message-icon" id="mobile-message-icon">sms</span>
+                        <p class="message-text">{{ message }}</p>
                     </div>
 
 
@@ -831,10 +869,21 @@ export default {
 
             let mobile_des = total_description
             if (mobile_des.length > char_limit) {
-                mobile_des = mobile_des.slice(0,char_limit) + '...';
+                mobile_des = mobile_des.slice(0, char_limit) + '...';
             }
 
-            return(mobile_des);
+            return (mobile_des);
+        },
+
+        getMobileCallout(char_limit) {
+            // to display the description within a specified character limit
+
+            let mobile_callout = this.calloutOne + '.' + this.calloutTwo + '.' + this.calloutThree + '.' + this.calloutFour + '.' + this.calloutFive;
+            if (mobile_callout.length > char_limit) {
+                mobile_callout = mobile_callout.slice(0, char_limit) + '...';
+            }
+
+            return (mobile_callout);
         },
 
 
@@ -891,6 +940,7 @@ export default {
 
         snippetEnd: function () {
             document.getElementById("snippet__end").style = "display: inline";
+            document.getElementById("mobile-callout").style = "display: block";
         },
 
         calloutSeperatorOne: function () {
@@ -911,15 +961,28 @@ export default {
 
         calloutEnd: function () {
             document.getElementById("callout__separator--five").style = "display: inline";
+            document.getElementById("mobile-sl__headline").style = "display: block";
         },
 
         displayLocation: function () {
             document.getElementById("location-icon").style = "display: block";
+            document.getElementById("mobile-location-icon").style = "display: block";
+            document.getElementById("mobile-location").style = "display: flex";
         },
 
         displayNumber: function () {
             document.getElementById("call-divider").style = "display: block";
+            document.getElementById("mobile-call-icon").style = "display: block";
+            document.getElementById("mobile-call").style = "display: flex";
         },
+
+        displaymessage: function () {
+            document.getElementById("mobile-message-icon").style = "display: block"
+        }
+
+        // displayBorder: function () {
+        //     document.getElementById("mb-sl__two").style = "display: block";
+        // },
 
 
 
