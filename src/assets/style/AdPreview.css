@@ -624,11 +624,11 @@ select {
 .mobile-sl__headline {
     font-size: 14px;
     color: #1A0DAB;
-    border: 1px solid rgba(182, 182, 182, 0.397);
+    /* border: 1px solid rgba(182, 182, 182, 0.397); */
     border-radius: 3px;
     padding: 5px 10px;
     margin-right: 12px;
-    display: none;
+    /* display: none; */
 
 }
 
@@ -646,7 +646,6 @@ select {
     gap: 20px;
     padding: 10px 0;
     border-top: 1px solid rgb(166 161 153 / 16%);
-    border-bottom: 1px solid rgb(166 161 153 / 16%);
 }
 
 
@@ -671,7 +670,6 @@ select {
     gap: 20px;
     padding: 10px 0;
     border-top: 1px solid rgb(166 161 153 / 16%);
-    border-bottom: 1px solid rgb(166 161 153 / 16%);
 }
 
 .mobile-call-icon {
@@ -687,8 +685,14 @@ select {
 
 .mobile-message {
     padding: 0 30px;
-    display: flex;
+}
+
+.mobile-message-wrapper {
+    padding: 10px 0;
+    display: none;
     gap: 15px;
+    align-items: center;
+    border-top: 1px solid rgb(166 161 153 / 16%);
 }
 
 .mobile-message-icon {

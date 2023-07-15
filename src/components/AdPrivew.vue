@@ -547,8 +547,9 @@
 
                         </div>
 
-                        <input type="text" id="message" v-model="message" v-on:keypress="displaymessage" class="message__input g__searchQuery__input"
-                            placeholder="Message Extension" name="" maxlength="60" cols="30" rows="10">
+                        <input type="text" id="message" v-model="message" v-on:keypress="displaymessage"
+                            class="message__input g__searchQuery__input" placeholder="Message Extension" name=""
+                            maxlength="60" cols="30" rows="10">
 
                     </div>
 
@@ -778,7 +779,7 @@
 
                     <div class="mobile-sitelink">
                         <!-- <div class="mobile-sitelink__one g__mobile-sitelink" id="mb-sl__one"> -->
-                        <p class="mobile-sl__headline" id="mobile-sl__headline">{{ sitelinkOne }}</p>
+                        <p class="mobile-sl__headline" id="mbSLHeadline1">{{ sitelinkOne }}</p>
                         <!-- </div> -->
                         <!-- 
                         <div class="mobile-sitelink__two g__mobile-sitelink" id="mb-sl__two">
@@ -804,9 +805,13 @@
                     </div>
 
                     <div class="mobile-message">
-                        <span class="material-symbols-outlined mobile-message-icon" id="mobile-message-icon">sms</span>
-                        <p class="message-text">{{ message }}</p>
+                        <div class="mobile-message-wrapper" id="mobile-message-wrapper">
+                            <span class="material-symbols-outlined mobile-message-icon" id="mobile-message-icon">sms</span>
+                            <p class="message-text">{{ this.getmessage(message, 40) }}</p>
+                        </div>
                     </div>
+
+
 
 
                 </div>
@@ -961,7 +966,8 @@ export default {
 
         calloutEnd: function () {
             document.getElementById("callout__separator--five").style = "display: inline";
-            document.getElementById("mobile-sl__headline").style = "display: block";
+            // document.getElementById("mobile-sl__headline").style = "display: block";
+            document.getElementById("mbSLHeadline1").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
         },
 
         displayLocation: function () {
@@ -978,7 +984,33 @@ export default {
 
         displaymessage: function () {
             document.getElementById("mobile-message-icon").style = "display: block"
+            document.getElementById("mobile-message-wrapper").style = "display: flex"
+
+            
+        },
+
+        getmessage: function (messageInput, char_limit) {
+
+            let message_text = messageInput
+            if (message_text.length > char_limit) {
+                message_text = message_text.slice(0, char_limit)+ '...';
+            }
+
+            return (message_text);
+
         }
+
+
+        // getMobileDescription(total_description, char_limit) {
+        //     // to display the description within a specified character limit
+
+        //     let mobile_des = total_description
+        //     if (mobile_des.length > char_limit) {
+        //         mobile_des = mobile_des.slice(0, char_limit) + '...';
+        //     }
+
+        //     return (mobile_des);
+        // },
 
         // displayBorder: function () {
         //     document.getElementById("mb-sl__two").style = "display: block";
