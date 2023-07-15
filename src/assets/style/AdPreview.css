@@ -117,6 +117,14 @@
     width: 50%;
 }
 
+/* .g__mobile-sitelink {
+    border: 1px solid rgba(182, 182, 182, 0.397);
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-right: 12px;
+    display: none;
+} */
+
 
 /* ------------------ // Individual Styles // ---------------- */
 
@@ -600,10 +608,99 @@ select {
     /* display: flex; */
 }
 
-.mobile-description__two {
-    /* text-overflow: ellipsis; */
-    /* max-width: 20ch; */
-    /* overflow: hidden; */
-    /* white-space: nowrap; */
+.mobile-callout {
+    padding: 0 30px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.mobile-sitelink {
+    display: flex;
+    overflow: hidden;
+    padding-left: 30px;
+    white-space: nowrap;
+}
+
+.mobile-sl__headline {
+    font-size: 14px;
+    color: #1A0DAB;
+    border: 1px solid rgba(182, 182, 182, 0.397);
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-right: 12px;
+    display: none;
 
 }
+
+.mobile-location-call {
+    padding: 0 30px;
+    display: flex;
+    gap: 50px;
+}
+
+
+.mobile-location {
+    width: 1000px;
+    display: none;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(166 161 153 / 16%);
+    border-bottom: 1px solid rgb(166 161 153 / 16%);
+}
+
+
+
+.mobile-location-icon {
+    display: none;
+    font-size: 22px;
+    color: rgb(68 68 68 / 79%);
+    margin-right: 10px;
+}
+
+.mobile-location-text {
+    font-size: 14px;
+    /* border-right: 1px solid rgb(166 161 153 / 16%); */
+}
+
+.mobile-call {
+    display: none;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(166 161 153 / 16%);
+    border-bottom: 1px solid rgb(166 161 153 / 16%);
+}
+
+.mobile-call-icon {
+    display: none;
+    font-size: 22px;
+    color: rgb(68 68 68 / 79%);
+    margin-right: 10px;
+}
+
+.mobile-call-text {
+    font-size: 14px;
+}
+
+.mobile-message {
+    padding: 0 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.mobile-message-icon {
+    display: none;
+    font-size: 22px;
+    color: rgb(68 68 68 / 79%);
+    /* margin-right: 10p; */
+}
+
+.message-text {
+    font-size: 14px;
+}
+
+
+
