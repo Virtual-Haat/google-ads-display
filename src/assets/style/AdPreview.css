@@ -110,7 +110,7 @@
 }
 
 .g__sitelink-container {
-    margin: 0 30px;
+    margin: 20px 30px 0 30px;
 }
 
 .g__sitelink-column {
@@ -619,6 +619,7 @@ select {
     overflow: hidden;
     padding-left: 30px;
     white-space: nowrap;
+    margin-bottom: 10px;
 }
 
 .mobile-sl__headline {
@@ -631,6 +632,7 @@ select {
     /* display: none; */
 
 }
+
 
 .mobile-location-call {
     padding: 0 30px;
@@ -690,7 +692,7 @@ select {
 .mobile-message-wrapper {
     padding: 10px 0;
     display: none;
-    gap: 15px;
+    gap: 30px;
     align-items: center;
     border-top: 1px solid rgb(166 161 153 / 16%);
 }
