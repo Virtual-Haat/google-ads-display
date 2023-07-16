@@ -369,7 +369,7 @@
 
                         </div>
 
-                        <input type="text" id="sitelinktwo" v-model="sitelinktwo" v-on:keypress="displayBorder()"
+                        <input type="text" id="sitelinktwo" v-model="sitelinktwo" v-on:keypress="displayBordertwo"
                             class="sitelinktwo__input g__searchQuery__input" placeholder="Sitelink two" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -408,7 +408,7 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkthree" v-model="sitelinkthree"
+                        <input type="text" id="sitelinkthree" v-model="sitelinkthree" v-on:keypress="displayBorderthree"
                             class="sitelinkthree__input g__searchQuery__input" placeholder="Sitelink Three" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -447,7 +447,7 @@
 
                         </div>
 
-                        <input type="text" id="sitelinkfour" v-model="sitelinkfour"
+                        <input type="text" id="sitelinkfour" v-model="sitelinkfour" v-on:keypress="displayBorderfour"
                             class="sitelinkfour__input g__searchQuery__input" placeholder="Sitelink Four" name=""
                             maxlength="30" cols="30" rows="10">
 
@@ -780,17 +780,11 @@
                     </div>
 
                     <div class="mobile-sitelink">
-                        <!-- <div class="mobile-sitelink__one g__mobile-sitelink" id="mb-sl__one"> -->
                         <p class="mobile-sl__headline" id="mbSLHeadline1">{{ sitelinkOne }}</p>
-                        <!-- </div> -->
-                        <!-- 
-                        <div class="mobile-sitelink__two g__mobile-sitelink" id="mb-sl__two">
-                            <p class="mobile-sl__headline">{{ sitelinktwo }}</p>
-                        </div> -->
-                        <!-- 
-                        <div class="mobile-sitelink__three g__mobile-sitelink">
-                            <p class="mobile-sl__headline">{{ sitelinkthree }}</p>
-                        </div> -->
+                        <p class="mobile-sl__headline" id="mbSLHeadline2">{{ sitelinktwo }}</p>
+                        <p class="mobile-sl__headline" id="mbSLHeadline3">{{ sitelinkthree }}</p>
+                        <p class="mobile-sl__headline" id="mbSLHeadline4">{{ sitelinkfour }}</p>
+
                     </div>
 
                     <div class="mobile-location-call">
@@ -969,7 +963,8 @@ export default {
         calloutEnd: function () {
             document.getElementById("callout__separator--five").style = "display: inline";
             // document.getElementById("mobile-sl__headline").style = "display: block";
-            // document.getElementById("mbSLHeadline1").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
+            document.getElementById("mbSLHeadline1").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
+
         },
 
         displayLocation: function () {
@@ -1000,7 +995,7 @@ export default {
 
             return (message_text);
 
-        }
+        },
 
 
         // getMobileDescription(total_description, char_limit) {
@@ -1014,9 +1009,15 @@ export default {
         //     return (mobile_des);
         // },
 
-        // displayBorder: function () {
-        //     document.getElementById("mb-sl__two").style = "display: block";
-        // },
+        displayBordertwo: function() {
+            document.getElementById("mbSLHeadline2").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
+        },
+        displayBorderthree: function() {
+            document.getElementById("mbSLHeadline3").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
+        },
+        displayBorderfour: function() {
+            document.getElementById("mbSLHeadline4").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
+        },
 
 
 
