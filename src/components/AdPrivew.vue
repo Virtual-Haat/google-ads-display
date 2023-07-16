@@ -663,6 +663,8 @@
                                 <p class="callout__four g__description">{{ calloutFour }}</p>
                                 <span class="callout__separator--four" id="callout__separator--four">.</span>
                                 <p class="callout__five g__description">{{ calloutFive }}</p>
+                                <span class="callout__separator--five" id="callout__separator--five">.</span>
+
 
                             </div>
 
@@ -967,7 +969,7 @@ export default {
         calloutEnd: function () {
             document.getElementById("callout__separator--five").style = "display: inline";
             // document.getElementById("mobile-sl__headline").style = "display: block";
-            document.getElementById("mbSLHeadline1").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
+            // document.getElementById("mbSLHeadline1").style = "border: 1px solid rgba(182, 182, 182, 0.397)";
         },
 
         displayLocation: function () {
@@ -986,14 +988,14 @@ export default {
             document.getElementById("mobile-message-icon").style = "display: block"
             document.getElementById("mobile-message-wrapper").style = "display: flex"
 
-            
+
         },
 
         getmessage: function (messageInput, char_limit) {
 
             let message_text = messageInput
             if (message_text.length > char_limit) {
-                message_text = message_text.slice(0, char_limit)+ '...';
+                message_text = message_text.slice(0, char_limit) + '...';
             }
 
             return (message_text);
