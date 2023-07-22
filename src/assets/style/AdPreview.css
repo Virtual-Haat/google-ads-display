@@ -712,3 +712,20 @@ select {
 
 
 
+.collapse .material-symbols-outlined {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgba(2,2,12,.042), 0 2px 4px -2px rgba(2,2,12,.1);
+}
+
+.collapse {
+    display: block;
+}
+
+.collapse2 {
+    display: none;
+}
+
+
+
