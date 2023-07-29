@@ -7,11 +7,11 @@
                     <div class="left-side__header-section g__headerSection">
                         <h3 class="left-side__header g__header">Search Query</h3>
 
-                        <span class="left-side__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
+                        <span class="left-side__arrow g__leftSide-arrow" @click="makeCollapse('querySearchBlock')"><i class="arrow down"></i></span>
                     </div>
 
 
-                    <div class="left-side__querysearch g__querySearch-section g_sectionDesign">
+                    <div id="querySearchBlock" class=" collapse left-side__querysearch g__querySearch-section g_sectionDesign">
                         <div class="querysearch__header g__searchHeader">
                             <label for="searchQuery">Search Query</label>
                             <span class="message-counter">{{ 30 - querysearch.length }}</span>
@@ -30,214 +30,224 @@
                 <div class="queryAd-details g_sectionDesign">
                     <div class="queryAd__heading g__headerSection">
                         <h3 class="queryAd__header g__header">Search Ad</h3>
-                        <span class="queryAd__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
+                        <span class="queryAd__arrow g__leftSide-arrow" @click="makeCollapse('queryAdBlock')"><i
+                                class="arrow down"></i></span>
                     </div>
 
-
-                    <div class="queryAd__headlineOne g__querySearch-section">
-                        <div class="queryAd__headlineOne--header g__searchHeader">
-                            <label for="headlineOne">Headline One</label>
-                            <span class="message-counter">{{ 30 - headlineOne.length }}</span>
-
-                        </div>
-
-                        <input type="text" id="headlineOne" v-model="headlineOne"
-                            class="headlineOne__input g__searchQuery__input" placeholder="Headline One" name=""
-                            maxlength="30" cols="30" rows="10">
-
-                    </div>
-
-                    <div class="queryAd__headlineTwo g__querySearch-section">
-                        <div class="queryAd__headlineTwo--header g__searchHeader">
-                            <label for="headlineTwo">Headline Two</label>
-                            <span class="message-counter">{{ 30 - headlineTwo.length }}</span>
-
-                        </div>
-
-                        <input type="text" id="headlineTwo" v-model="headlineTwo" v-on:keypress="displayHeadlinetwo()"
-                            class="headlineTwo__input g__searchQuery__input" placeholder="Headline Two" name=""
-                            maxlength="30" cols="30" rows="10">
-
-                    </div>
-
-                    <div class="queryAd__headlineThree g__querySearch-section">
-                        <div class="queryAd__headlineThree--header g__searchHeader">
-                            <label for="headlineThree">Headline Three</label>
-                            <span class="message-counter">{{ 30 - headlineThree.length }}</span>
-
-                        </div>
-
-                        <input type="text" id="headlineThree" v-model="headlineThree" v-on:keypress="displayHeadlinethree()"
-                            class="headlineThree__input g__searchQuery__input" placeholder="Headline Three" name=""
-                            maxlength="30" cols="30" rows="10">
-
-                    </div>
-
-                    <div class="queryAd__Displayurl g__querySearch-section">
-                        <div class="queryAd__Displayurl--header g__searchHeader">
-                            <label for="Displayurl">Display URL</label>
-                            <span class="message-counter">{{ 60 - displayUrl.length }}</span>
-
-                        </div>
-
-                        <input type="text" id="Displayurl" v-model="displayUrl" v-on:keypress="advert()"
-                            class="Displayurl__input g__searchQuery__input" placeholder="Display URL" name="" maxlength="60"
-                            cols="30" rows="10">
-
-                    </div>
-
-                    <div class="path">
-                        <div class="queryAd__pathOne">
-                            <div class="queryAd__pathOne--header g__searchHeader">
-                                <label for="pathOne">Path One</label>
-                                <span class="message-counter">{{ 15 - pathOne.length }}</span>
+                    <div id="queryAdBlock" class="collapse">
+                        <div class="queryAd__headlineOne g__querySearch-section">
+                            <div class="queryAd__headlineOne--header g__searchHeader">
+                                <label for="headlineOne">Headline One</label>
+                                <span class="message-counter">{{ 30 - headlineOne.length }}</span>
 
                             </div>
 
-                            <input type="text" id="pathOne" v-model="pathOne" v-on:keypress="displayUrlOne()"
-                                class="pathOne__input g__searchQuery__input" placeholder="Path One" name="" maxlength="15">
+                            <input type="text" id="headlineOne" v-model="headlineOne"
+                                class="headlineOne__input g__searchQuery__input" placeholder="Headline One" name=""
+                                maxlength="30" cols="30" rows="10">
 
                         </div>
 
-                        <div class="queryAd__pathTwo">
-                            <div class="queryAd__pathTwo--header g__searchHeader">
-                                <label for="pathTwo">Path Two</label>
-                                <span class="message-counter">{{ 15 - pathTwo.length }}</span>
+                        <div class="queryAd__headlineTwo g__querySearch-section">
+                            <div class="queryAd__headlineTwo--header g__searchHeader">
+                                <label for="headlineTwo">Headline Two</label>
+                                <span class="message-counter">{{ 30 - headlineTwo.length }}</span>
 
                             </div>
 
-                            <input type="text" id="pathTwo" v-model="pathTwo" v-on:keypress="displayUrlTwo()"
-                                class="pathTwo__input g__searchQuery__input" placeholder="Path Two" name="" maxlength="15">
+                            <input type="text" id="headlineTwo" v-model="headlineTwo" v-on:keypress="displayHeadlinetwo()"
+                                class="headlineTwo__input g__searchQuery__input" placeholder="Headline Two" name=""
+                                maxlength="30" cols="30" rows="10">
+
+                        </div>
+
+                        <div class="queryAd__headlineThree g__querySearch-section">
+                            <div class="queryAd__headlineThree--header g__searchHeader">
+                                <label for="headlineThree">Headline Three</label>
+                                <span class="message-counter">{{ 30 - headlineThree.length }}</span>
+
+                            </div>
+
+                            <input type="text" id="headlineThree" v-model="headlineThree"
+                                v-on:keypress="displayHeadlinethree()" class="headlineThree__input g__searchQuery__input"
+                                placeholder="Headline Three" name="" maxlength="30" cols="30" rows="10">
+
+                        </div>
+
+                        <div class="queryAd__Displayurl g__querySearch-section">
+                            <div class="queryAd__Displayurl--header g__searchHeader">
+                                <label for="Displayurl">Display URL</label>
+                                <span class="message-counter">{{ 60 - displayUrl.length }}</span>
+
+                            </div>
+
+                            <input type="text" id="Displayurl" v-model="displayUrl" v-on:keypress="advert()"
+                                class="Displayurl__input g__searchQuery__input" placeholder="Display URL" name=""
+                                maxlength="60" cols="30" rows="10">
+
+                        </div>
+
+                        <div class="path">
+                            <div class="queryAd__pathOne">
+                                <div class="queryAd__pathOne--header g__searchHeader">
+                                    <label for="pathOne">Path One</label>
+                                    <span class="message-counter">{{ 15 - pathOne.length }}</span>
+
+                                </div>
+
+                                <input type="text" id="pathOne" v-model="pathOne" v-on:keypress="displayUrlOne()"
+                                    class="pathOne__input g__searchQuery__input" placeholder="Path One" name=""
+                                    maxlength="15">
+
+                            </div>
+
+                            <div class="queryAd__pathTwo">
+                                <div class="queryAd__pathTwo--header g__searchHeader">
+                                    <label for="pathTwo">Path Two</label>
+                                    <span class="message-counter">{{ 15 - pathTwo.length }}</span>
+
+                                </div>
+
+                                <input type="text" id="pathTwo" v-model="pathTwo" v-on:keypress="displayUrlTwo()"
+                                    class="pathTwo__input g__searchQuery__input" placeholder="Path Two" name=""
+                                    maxlength="15">
+
+                            </div>
+                        </div>
+
+                        <div class="queryAd__DescriptionOne g__querySearch-section">
+                            <div class="queryAd__DescriptionOne--header g__searchHeader">
+                                <label for="DescriptionOne">Description One</label>
+                                <span class="message-counter">{{ 90 - descriptionOne.length }}</span>
+
+                            </div>
+
+                            <textarea id="DescriptionOne" v-model="descriptionOne"
+                                class="DescriptionOne__input g__searchQuery__input" placeholder="Description One" name=""
+                                maxlength="90" cols="30" rows="5"></textarea>
+
+                        </div>
+
+                        <div class="queryAd__DescriptionTwo g__querySearch-section">
+                            <div class="queryAd__DescriptionTwo--header g__searchHeader">
+                                <label for="DescriptionTwo">Description Two</label>
+                                <span class="message-counter">{{ 90 - descriptionTwo.length }}</span>
+
+                            </div>
+
+                            <textarea id="DescriptionTwo" v-model="descriptionTwo"
+                                class="DescriptionTwo__input g__searchQuery__input" placeholder="Description Two" name=""
+                                maxlength="90" cols="30" rows="5"></textarea>
 
                         </div>
                     </div>
 
-                    <div class="queryAd__DescriptionOne g__querySearch-section">
-                        <div class="queryAd__DescriptionOne--header g__searchHeader">
-                            <label for="DescriptionOne">Description One</label>
-                            <span class="message-counter">{{ 90 - descriptionOne.length }}</span>
 
-                        </div>
 
-                        <textarea id="DescriptionOne" v-model="descriptionOne"
-                            class="DescriptionOne__input g__searchQuery__input" placeholder="Description One" name=""
-                            maxlength="90" cols="30" rows="5"></textarea>
-
-                    </div>
-
-                    <div class="queryAd__DescriptionTwo g__querySearch-section">
-                        <div class="queryAd__DescriptionTwo--header g__searchHeader">
-                            <label for="DescriptionTwo">Description Two</label>
-                            <span class="message-counter">{{ 90 - descriptionTwo.length }}</span>
-
-                        </div>
-
-                        <textarea id="DescriptionTwo" v-model="descriptionTwo"
-                            class="DescriptionTwo__input g__searchQuery__input" placeholder="Description Two" name=""
-                            maxlength="90" cols="30" rows="5"></textarea>
-
-                    </div>
 
                 </div>
 
                 <div class="structured-snippets g_sectionDesign">
                     <div class="structured-snippets g__headerSection">
                         <h3 class="structured-snippets__header g__header">Structured Snippets</h3>
-                        <span class="structured-snippets__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
+                        <span class="structured-snippets__arrow g__leftSide-arrow" @click="makeCollapse('snippetBlock')"><i
+                                class="arrow down"></i></span>
                     </div>
 
 
-                    <div class="snippetHeading g__querySearch-section">
-                        <div class="snippetHeader--header g__searchHeader">
-                            <label for="snippetHeader">Snippet Header</label>
+                    <div id="snippetBlock" class="collapse">
+                        <div class="snippetHeading g__querySearch-section">
+                            <div class="snippetHeader--header g__searchHeader">
+                                <label for="snippetHeader">Snippet Header</label>
+
+                            </div>
+
+                            <div class="selectbox">
+                                <select v-model="selected" v-on:click="selectColon()" name="snippetHeader__selectbox"
+                                    id="snippetHeader">
+                                    <option disabled selected value="">Select</option>
+                                    <option value="brands">Brands</option>
+                                    <option value="amenities">Amenities</option>
+                                    <option value="styles">Styles</option>
+                                    <option value="types">Types</option>
+                                    <option value="destinations">Destinations</option>
+                                    <option value="services">Services</option>
+                                    <option value="courses">Courses</option>
+                                    <option value="neighbourshoods">Neighbourshoods</option>
+                                    <option value="shows">Shows</option>
+                                    <option value="insurance coverage">Insurance Coverage</option>
+                                    <option value="degree programs">Degree Programs</option>
+                                    <option value="featured hotels">Featured Hotels</option>
+                                    <option value="models">Models</option>
+                                </select>
+                            </div>
 
                         </div>
 
-                        <div class="selectbox">
-                            <select v-model="selected" v-on:click="selectColon()" name="snippetHeader__selectbox"
-                                id="snippetHeader">
-                                <option disabled selected value="">Select</option>
-                                <option value="brands">Brands</option>
-                                <option value="amenities">Amenities</option>
-                                <option value="styles">Styles</option>
-                                <option value="types">Types</option>
-                                <option value="destinations">Destinations</option>
-                                <option value="services">Services</option>
-                                <option value="courses">Courses</option>
-                                <option value="neighbourshoods">Neighbourshoods</option>
-                                <option value="shows">Shows</option>
-                                <option value="insurance coverage">Insurance Coverage</option>
-                                <option value="degree programs">Degree Programs</option>
-                                <option value="featured hotels">Featured Hotels</option>
-                                <option value="models">Models</option>
-                            </select>
-                        </div>
+                        <div class="snippetOne g__querySearch-section">
+                            <div class="snippetOne--header g__searchHeader">
+                                <label for="snippetOne">Snippet One</label>
+                                <span class="message-counter">{{ 25 - snippetOne.length }}</span>
 
-                    </div>
+                            </div>
 
-                    <div class="snippetOne g__querySearch-section">
-                        <div class="snippetOne--header g__searchHeader">
-                            <label for="snippetOne">Snippet One</label>
-                            <span class="message-counter">{{ 25 - snippetOne.length }}</span>
+                            <input type="text" id="snippetOne" v-model="snippetOne"
+                                class="snippetOne__input g__searchQuery__input" placeholder="Snippet One" name=""
+                                maxlength="25" cols="30" rows="10">
 
                         </div>
 
-                        <input type="text" id="snippetOne" v-model="snippetOne"
-                            class="snippetOne__input g__searchQuery__input" placeholder="Snippet One" name="" maxlength="25"
-                            cols="30" rows="10">
+                        <div class="snippetTwo g__querySearch-section">
+                            <div class="snippetTwo--header g__searchHeader">
+                                <label for="snippetTwo">Snippet Two</label>
+                                <span class="message-counter">{{ 25 - snippetTwo.length }}</span>
 
-                    </div>
+                            </div>
 
-                    <div class="snippetTwo g__querySearch-section">
-                        <div class="snippetTwo--header g__searchHeader">
-                            <label for="snippetTwo">Snippet Two</label>
-                            <span class="message-counter">{{ 25 - snippetTwo.length }}</span>
-
-                        </div>
-
-                        <input type="text" id="snippetTwo" v-model="snippetTwo" v-on:keypress="snippetCommaOne()"
-                            class="snippetTwo__input g__searchQuery__input" placeholder="Snippet Two" name="" maxlength="25"
-                            cols="30" rows="10">
-
-                    </div>
-
-                    <div class="snippetThree g__querySearch-section">
-                        <div class="snippetThree--header g__searchHeader">
-                            <label for="snippetThree">Snippet Three</label>
-                            <span class="message-counter">{{ 25 - snippetThree.length }}</span>
+                            <input type="text" id="snippetTwo" v-model="snippetTwo" v-on:keypress="snippetCommaOne()"
+                                class="snippetTwo__input g__searchQuery__input" placeholder="Snippet Two" name=""
+                                maxlength="25" cols="30" rows="10">
 
                         </div>
 
-                        <input type="text" id="snippetThree" v-model="snippetThree" v-on:keypress="snippetCommaTwo()"
-                            class="snippetThree__input g__searchQuery__input" placeholder="Snippet Three" name=""
-                            maxlength="25" cols="30" rows="10">
+                        <div class="snippetThree g__querySearch-section">
+                            <div class="snippetThree--header g__searchHeader">
+                                <label for="snippetThree">Snippet Three</label>
+                                <span class="message-counter">{{ 25 - snippetThree.length }}</span>
 
-                    </div>
+                            </div>
 
-                    <div class="snippetFour g__querySearch-section">
-                        <div class="snippetFour--header g__searchHeader">
-                            <label for="snippetFour">Snippet Four</label>
-                            <span class="message-counter">{{ 25 - snippetFour.length }}</span>
-
-                        </div>
-
-                        <input type="text" id="snippetFour" v-model="snippetFour" v-on:keypress="snippetCommaThree()"
-                            class="snippetFour__input g__searchQuery__input" placeholder="Snippet Four" name=""
-                            maxlength="25" cols="30" rows="10">
-
-                    </div>
-
-                    <div class="snippetFive g__querySearch-section">
-                        <div class="snippetFive--header g__searchHeader">
-                            <label for="snippetFive">Snippet Five</label>
-                            <span class="message-counter">{{ 25 - snippetFive.length }}</span>
+                            <input type="text" id="snippetThree" v-model="snippetThree" v-on:keypress="snippetCommaTwo()"
+                                class="snippetThree__input g__searchQuery__input" placeholder="Snippet Three" name=""
+                                maxlength="25" cols="30" rows="10">
 
                         </div>
 
-                        <input type="text" id="snippetFive" v-model="snippetFive" v-on:keypress="snippetCommaFour()"
-                            class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
-                            maxlength="25" cols="30" rows="10">
+                        <div class="snippetFour g__querySearch-section">
+                            <div class="snippetFour--header g__searchHeader">
+                                <label for="snippetFour">Snippet Four</label>
+                                <span class="message-counter">{{ 25 - snippetFour.length }}</span>
 
+                            </div>
+
+                            <input type="text" id="snippetFour" v-model="snippetFour" v-on:keypress="snippetCommaThree()"
+                                class="snippetFour__input g__searchQuery__input" placeholder="Snippet Four" name=""
+                                maxlength="25" cols="30" rows="10">
+
+                        </div>
+
+                        <div class="snippetFive g__querySearch-section">
+                            <div class="snippetFive--header g__searchHeader">
+                                <label for="snippetFive">Snippet Five</label>
+                                <span class="message-counter">{{ 25 - snippetFive.length }}</span>
+
+                            </div>
+
+                            <input type="text" id="snippetFive" v-model="snippetFive" v-on:keypress="snippetCommaFour()"
+                                class="snippetFive__input g__searchQuery__input" placeholder="Snippet Five" name=""
+                                maxlength="25" cols="30" rows="10">
+
+                        </div>
                     </div>
 
 
@@ -247,7 +257,8 @@
                 <div class="calloutExtensions g_sectionDesign">
                     <div class="calloutExtensions__heading g__headerSection">
                         <h3 class="calloutExtensions__header g__header">Callout Extensions</h3>
-                        <span @click="makeCollapse('calloutBlock')" class="calloutExtensions__arrow g__leftSide-arrow"><i class="arrow down"></i></span>
+                        <span @click="makeCollapse('calloutBlock')" class="calloutExtensions__arrow g__leftSide-arrow"><i
+                                class="arrow down"></i></span>
                     </div>
 
 
@@ -570,31 +581,10 @@
 
 
                 </div>
-
-                <div class="CollapsibleAction g_sectionDesign">
-                    <div class="collapse__heading g__headerSection">
-                        <h3 class="collapse__header g__header">Collapse Action</h3>
-                        <span @click="makeCollapse2()" class="material-symbols-outlined">expand_more</span>
-                        <!-- <span class="collapse__arrow g__leftSide-arrow" v-on:click="collapseSection()">
-                            <i class="arrow down"></i>
-                        </span> -->
-                    </div>
-
-                    <div id="other" :class="collapse_var" class="g__querySearch-section">
-                        <div class="collapse--header g__searchHeader">
-                            <label for="collapse">Collapse Label</label>
-                        </div>
-
-                        <input type="text" id="collapse" class="collapse__input g__searchQuery__input"
-                            placeholder="collapse" name="" maxlength="60" cols="30" rows="10">
-
-                    </div>
-
-                </div>
-
-
             </section>
-            <div class="right-side">
+
+
+            <section class="right-side">
                 <div class="right-side__desktop-version">
                     <div class="desktop-version__header">
                         <div class="header__logo">
@@ -841,7 +831,7 @@
 
 
                 </div>
-            </div>
+            </section>
         </section>
 
     </div>
@@ -910,43 +900,6 @@ export default {
             }
         },
 
-        makeCollapse2() {
-            console.log(this.collapse_var)
-            if (this.collapse_var = "") {
-                this.collapse_var = "collapse2";
-                console.log(this.collapse_var);
-
-            }
-            else {
-                this.collapse_var = ""
-            }
-
-
-
-            // let myel = document.getElementsByClassName('collapse');
-
-            // for (let i = 0; i < myel.length; i++) {
-            //     if (el_id == myel[i].id) {
-            //         let myel_status = myel[i].style.display
-            //         if (myel_status == 'none') {
-            //             myel[i].style.display = 'block';
-            //         } else {
-            //             myel[i].style.display = 'none'
-            //         }
-            //     }
-            // }
-        },
-
-
-        collapseSection() {
-            let content = document.getElementsByClassName("collapse");
-            if (content.style === "display : block") {
-                content.style = "display : none;"
-            }
-            else {
-                content.style = "display : block";
-            }
-        },
 
         getMobileDescription(total_description, char_limit) {
             // to display the description within a specified character limit
