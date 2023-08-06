@@ -2,7 +2,7 @@
     <div>
 
         <section class="content-wrapper">
-            <section class="left-side">
+            <section class="left-side" id="mobileClickableLeftSide">
                 <div class="left-side__heading">
                     <div class="left-side__header-section g__headerSection">
                         <h3 class="left-side__header g__header">Search Query</h3>
@@ -583,8 +583,12 @@
                 </div>
             </section>
 
-
             <section class="right-side">
+                <div class="mobileClickableCancellation" id="clicked__mobile-cancel" v-on:click="disableLeftSide()">
+                    <span class="material-symbols-outlined mobile__cancel">close</span>
+                </div>
+
+
                 <div class="right-side__desktop-version">
                     <div class="desktop-version__header">
                         <div class="header__logo">
@@ -827,11 +831,22 @@
                         </div>
                     </div>
 
+                    <div class="mobile-view__buttons">
+                        <button class="action-button">
+                            <span class="button-icon button-icon--green  material-symbols-outlined">share_windows</span>
+                        </button>
 
+                        <button class="action-button action-button--main" v-on:click="displayleftside()">
+                            <span class="button-icon button-icon--white  material-symbols-outlined">arrow_upward</span>
+                        </button>
 
-
+                        <button class="action-button">
+                            <span class="button-icon button-icon--red    material-symbols-outlined">delete</span>
+                        </button>
+                    </div>
                 </div>
             </section>
+
         </section>
 
     </div>
@@ -884,6 +899,20 @@ export default {
     },
 
     methods: {
+
+
+        displayleftside() {
+            document.getElementById("mobileClickableLeftSide").style = "top : 15%";
+            document.getElementById("clicked__mobile-cancel").style = "opacity : 100%";
+            // document.getElementsByClassName("left-side").style = "height:100%";
+        },
+
+        disableLeftSide() {
+            document.getElementById("mobileClickableLeftSide").style = "top : 100%";
+            document.getElementById("clicked__mobile-cancel").style = "opacity : 0";
+
+
+        },
 
         makeCollapse(el_id) {
             let myel = document.getElementsByClassName('collapse');
